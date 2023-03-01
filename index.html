@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!-- <html lang="en"> -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div class="open-sidebar">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="side-bar">
+        <div class="close-sidebar">X</div>
+        <form action="" class="add-prd-form">
+            <label for="prodauct-name">product name</label>
+            <input type="text" id="product-name" class="add-product-input" required>
+
+            <label for="price">price</label>
+            <input type="text" id="price" class="add-product-input" required>
+
+            <label for="category">Category</label>
+            <select id="category" class="add-product-input" required>
+                <option value="" disabled selected>choose category</option>
+                <option value="Topwear">Topwear</option>
+                <option value="Bottomwear">Bottomwear</option>
+                <option value="Jacket">Jacket</option>
+                <option value="Watch">Watch</option>
+            </select>
+
+            <input type="file" id="image-file" accept="image/x-png,image/gif,image/jpeg" required>
+            <div class="display-image">
+            
+            </div>
+            <button type="submit">Add product</button>
+        </form>
+        
+    </div>
+    
+    <div class="wrapper">
+        <div id="search-container">
+            <input type="search" id="search-input" placeholder="search product ..">
+            <button id="search">Search</button>
+        </div>
+    </div>
+    
+    <div id="bottons">
+        <button class="button-value" onclick="FilterProducts.selectedButton('All')">All</button>
+        <button class="button-value" onclick="FilterProducts.selectedButton('Topwear')">Topwear</button>
+        <button class="button-value" onclick="FilterProducts.selectedButton('Bottomwear')">Bottomwear</button>
+        <button class="button-value" onclick="FilterProducts.selectedButton('Jacket')">Jacket</button>
+        <button class="button-value" onclick="FilterProducts.selectedButton('Watch')">Watch</button>
+    </div>
+    <div class="body-container">
+        <div class="all-products">
+            
+        </div>
+    </div>
+    <script src="dist/scProduct.js"></script>
+</body>
+</html>
